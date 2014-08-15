@@ -3,7 +3,7 @@
   
   Set up the LED so that when the color pin is low, the LED is off.
   
-  andrew.barthle@raritet.co
+  andy.oliver at raritet dot co
 *******************************************************************************/
 
 // INCLUDES
