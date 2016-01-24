@@ -7,10 +7,11 @@ permalink:        pretty
 relative_permalinks: true
 
 # Setup
-title:            'Color Compass'
-tagline:          'Direction -> Color'
-description:      'Arduino program to convert compass heading to a color on an RGB LED.'
-baseurl:          /ColorCompass
+title:            Raritet
+tagline:          'Art Design Engineering'
+description:      'Art, design, and engineering.'
+url:              http://raritet.github.io
+baseurl:          /
 
 author:
   name:           'Andy Oliver'
@@ -22,4 +23,4 @@ paginate:         5
 version:          0.1
 
 github:
-  repo:           https://github.com/raritet/ColorCompass
+  repo:           https://github.com/raritet/raritet.github.io
