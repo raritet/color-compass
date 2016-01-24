@@ -1,0 +1,26 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
+
+# Setup
+title:            Raritet
+tagline:          'Art Design Engineering'
+description:      'Art, design, and engineering.'
+url:              http://raritet.github.io
+baseurl:          /
+
+author:
+  name:           'Andy Oliver'
+  url:            https://www.andy-oliver.com
+
+paginate:         5
+
+# Custom vars
+version:          0.1
+
+github:
+  repo:           https://github.com/raritet/raritet.github.io
