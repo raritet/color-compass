@@ -11,7 +11,7 @@ title:            Color Compass
 tagline:          'Direction to Color'
 description:      'Conveying direction in a fun, ambient way.'
 url:              http://raritet.github.io/ColorCompass/
-baseurl:          http://raritet.github.io/ColorCompass
+baseurl:          http://raritet.github.io/ColorCompass/
 
 author:
   name:           'Andy Oliver'
