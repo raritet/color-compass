@@ -1,17 +1,18 @@
 /*******************************************************************************
   A program to display compass heading angle as a color on an RGB LED.
-  
+
   Set up the LED so that when the color pin is low, the LED is off.
-  
+
   andy.oliver at raritet dot co
 *******************************************************************************/
 
 // INCLUDES
 #include <Wire.h>
+// Get these from the Adafruit website
 #include <Adafruit_LSM303.h>
 #include <Adafruit_Sensor.h>
 
-// Assign a unique ID to this sensor at the same time.
+// Assign a unique ID to this sensor.
 Adafruit_LSM303_Mag mag = Adafruit_LSM303_Mag(12345);
 
 // CONSTANT DECLARATIONS
@@ -42,19 +43,19 @@ float headingAngle = 0.0;
 void setup(void) {
   // Start serial communication to monitor on the terminal for troubleshooting.
   Serial.begin(9600);
-  
+
   // Initialize the sensor.
   if(!mag.begin()) {
     // And if it doesn't initialize, there was a problem.
     Serial.println("No LSM303 detected. Check your wiring.");
     while(1);
   }
-  
+
   // Even though it's not necessary, it seems cleaner to set the pins as output.
   pinMode(RED_PIN, OUTPUT);
   pinMode(GREEN_PIN, OUTPUT);
   pinMode(BLUE_PIN, OUTPUT);
-  
+
   // Get a new sensor event.
   sensors_event_t event;
   mag.getEvent(&event);
