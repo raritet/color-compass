@@ -3,7 +3,7 @@
 
   Set up the LED so that when the color pin is low, the LED is off.
 
-  andy.oliver at raritet dot co
+  andy dot oliver at raritet dot co
 *******************************************************************************/
 
 // INCLUDES
@@ -25,6 +25,7 @@ const int MAX_PWM = 0;
 // Set MIN_PWM to 0 for common anode RGB LEDs and 255 for common cathode.
 const int MIN_PWM = 255;
 // Smoothing factor 0 < ALPHA < 1 (larger APLHA is less smooth).
+// This is currently for a basic exponential filer.
 const float ALPHA = 0.0625;
 
 // VARIABLE DECLARATIONS
@@ -38,6 +39,7 @@ float newHeadingY = 0.0;
 float headingAngle = 0.0;
 
 // CLASS DECLARATIONS
+// None at the moment.
 
 // SETUP FUNCTION
 void setup(void) {
@@ -82,9 +84,11 @@ void loop(void) {
   if(headingAngle < 0) {
     headingAngle = 360 + headingAngle;
   }
+  
   // Send the heading to the console for monitoring.
   // Serial.println(headingAngle);
   // delay(100);
+  
   // Display the heading angle as a color on the RGB LED.
   // Note that the function expects an integer.
   displayColor(HIGH, int(headingAngle));
